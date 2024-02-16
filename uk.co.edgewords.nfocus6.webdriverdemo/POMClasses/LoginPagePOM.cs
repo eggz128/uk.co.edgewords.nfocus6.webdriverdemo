@@ -20,8 +20,9 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
             Assert.That(_driver.FindElement(By.TagName("h1")).Text, 
                 Does.Contain("Access and Authentication"), 
                 "Must be wrong page");
-            Assert.That(_driver.Url, Is.EqualTo("whatever"));
-            Assert.That(_driver.Title, Is.EqualTo("Page title"));
+            //Assert.That(_driver.Url, Is.EqualTo("whatever"));
+            //Assert.That(_driver.Title, Is.EqualTo("Page title"));
+            //You could also choose to wait for something on the page that signals most/all elements are ready
         }
 
         //Locators
