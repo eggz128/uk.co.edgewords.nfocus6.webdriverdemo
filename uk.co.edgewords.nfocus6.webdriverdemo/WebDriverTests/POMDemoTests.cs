@@ -10,7 +10,7 @@ using static uk.co.edgewords.nfocus6.webdriverdemo.Utils.StaticHelperLib;
 
 namespace uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests
 {
-    internal class DemoTests : BaseTest
+    internal class POMDemoTests : BaseTest
     {
         //A comment
         [Test]
