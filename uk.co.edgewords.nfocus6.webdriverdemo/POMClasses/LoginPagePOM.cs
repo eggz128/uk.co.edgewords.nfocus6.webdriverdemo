@@ -17,8 +17,8 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
         {
             this._driver = driver; //Assigns passed driver in to private field in this class
             //Generally no assertions in the POM classes - checking you are on the right page when you instantiate the class is an allowable exception to that rule
-            Assert.That(_driver.FindElement(By.TagName("h1")).Text, 
-                Does.Contain("Access and Authentication"), 
+            Assert.That(_driver.FindElement(By.TagName("h1")).Text,
+                Does.Contain("Access and Authentication"),
                 "Must be wrong page");
             //Assert.That(_driver.Url, Is.EqualTo("whatever"));
             //Assert.That(_driver.Title, Is.EqualTo("Page title"));
@@ -26,15 +26,16 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
         }
 
         //Locators
-        //private IWebElement usernameField => _driver.FindElement(By.Id("username"));
-        private IWebElement _usernameField => new WebDriverWait(_driver, TimeSpan.FromSeconds(3)).Until(drv=>drv.FindElement(By.Id("username")));
-        //private IWebElement _passwordField => _driver.FindElement(By.Id("password"));
+        //private IWebElement usernameField => _driver.FindElement(By.Id("username")); //But what if we need to wait for this element?...
+        private IWebElement _usernameField => new WebDriverWait(_driver, TimeSpan.FromSeconds(3)).Until(drv => drv.FindElement(By.Id("username")));
+
+        //private IWebElement _passwordField => _driver.FindElement(By.Id("password")); //Waiting for this element using the previously defined static helper method
         private IWebElement _passwordField
         {
             get
             {
-                StaticWaitForElement(_driver, By.Id("password"), 1);
-                return _driver.FindElement(By.Id("password"));
+                StaticWaitForElement(_driver, By.Id("password"), 1); //As this method does not return the found webelement it is necessary to...
+                return _driver.FindElement(By.Id("password")); //...refind it for the return.
             }
         }
 
@@ -61,10 +62,22 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
             _submitFormButton.Click();
         }
 
+        //setUsername() and setPassword() is a very "Java"ish way of doing this. Can we achieve this with C# getter and setters?
+        public string Username
+        {
+            get { return _usernameField.GetAttribute("value"); }
+            set
+            {
+                _usernameField.Clear();
+                _usernameField.SendKeys(value);
+            }
+        }
+
         //Higher level helpers
         public bool LoginExpectSuccess(string username, string password)
         {
-            setUsername(username);
+            //setUsername(username); //"Java"ish method
+            Username = username; //C#ish property setting
             setPassword(password);
             submitForm();
 
@@ -73,7 +86,8 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
             {
                 _driver.SwitchTo().Alert();
                 return false; //Failed log
-            } catch (NoAlertPresentException e)
+            }
+            catch (NoAlertPresentException e)
             {
                 return true; //Login success
             }
