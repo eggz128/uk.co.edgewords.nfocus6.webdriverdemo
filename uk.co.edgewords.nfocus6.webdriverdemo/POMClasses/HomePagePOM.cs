@@ -19,12 +19,12 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
         }
 
         //Locators - finding elements on the page
-        private IWebElement loginLink => _driver.FindElement(By.PartialLinkText("Login")); //Every time loginLink is used this find is performed again - (hopefully) avoiding stale elements
+        private IWebElement _loginLink => _driver.FindElement(By.PartialLinkText("Login")); //Every time loginLink is used this find is performed again - (hopefully) avoiding stale elements
 
         //Service methods - doing things with elements on the page
         public LoginPagePOM GoLogin() //This method should really be void
         {
-            loginLink.Click();
+            _loginLink.Click();
             return new LoginPagePOM(this._driver); //and not return an instance of the page being navigated to. As is although this allows method chaining, debugging one long statement when things go wrong is confusing.
             //More succinctly: If an user action causes a navigation event, don't allow chaining from that point.
         }
