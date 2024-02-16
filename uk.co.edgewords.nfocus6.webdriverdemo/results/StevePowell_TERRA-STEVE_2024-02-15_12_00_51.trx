@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="63c999aa-b3d8-4e53-8bbb-dcaaca58f635" name="StevePowell@TERRA-STEVE 2024-02-15 12:00:51" runUser="AzureAD\StevePowell" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-02-15T12:00:51.6053572+00:00" queuing="2024-02-15T12:00:51.6053579+00:00" start="2024-02-15T12:00:38.8032564+00:00" finish="2024-02-15T12:01:21.7372051+00:00" />
+  <TestSettings name="default" id="5b1afef3-adbb-486b-b88d-7aac486ce595">
+    <Deployment runDeploymentRoot="StevePowell_TERRA-STEVE_2024-02-15_12_00_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b507c710-5af5-4195-94f2-e6fcae049e50" testId="7af553c5-afa3-a6db-a9a1-b97e2ae15295" testName="FirstTest" computerName="TERRA-STEVE" duration="00:00:16.4001829" startTime="2024-02-15T12:00:51.3478181+00:00" endTime="2024-02-15T12:01:07.7479990+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b507c710-5af5-4195-94f2-e6fcae049e50">
+      <Output>
+        <StdOut>Start test&#xD;
+Should be on Login page. Heading text is: Access and Authentication&#xD;
+Attaching screenshot to report&#xD;
+Also writes a line in to the report&#xD;
+The typed username text is &#xD;
+The typed text is actually : edgewords&#xD;
+Finish test&#xD;
+Status: Failed&#xD;
+Message:   Already logged in? Continue rest of test anyway...&#xD;
+Assert.That(bodyText, Does.Contain("User is not logged in"))&#xD;
+  Expected: String containing "User is not logged in"&#xD;
+  But was:  "User is not Logged in&#xD;
+Login&#xD;
+Register&#xD;
+Access and Authentication&#xD;
+Login&#xD;
+User Name?&#xD;
+Password?&#xD;
+Submit Clear&#xD;
+©2014 Edgewords Limited"</StdOut>
+        <ErrorInfo>
+          <Message>  Already logged in? Continue rest of test anyway...&#xD;
+Assert.That(bodyText, Does.Contain("User is not logged in"))&#xD;
+  Expected: String containing "User is not logged in"&#xD;
+  But was:  "User is not Logged in&#xD;
+Login&#xD;
+Register&#xD;
+Access and Authentication&#xD;
+Login&#xD;
+User Name?&#xD;
+Password?&#xD;
+Submit Clear&#xD;
+©2014 Edgewords Limited"&#xD;
+</Message>
+          <StackTrace>   at uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.HelloWebDriver.FirstTest() in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\WebDriverTests\HelloWebDriver.cs:line 92&#xD;
+
+1)    at uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.HelloWebDriver.FirstTest() in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\WebDriverTests\HelloWebDriver.cs:line 92&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+      <ResultFiles>
+        <ResultFile path="TERRA-STEVE\form.png" />
+      </ResultFiles>
+    </UnitTestResult>
+    <UnitTestResult executionId="c5bd018d-d3b8-478f-918d-700cfe8365e2" testId="6b8b5b78-27c7-ff0e-3cf0-06c9d35fc1ad" testName="DragDropDemo" computerName="TERRA-STEVE" duration="00:00:12.9129100" startTime="2024-02-15T12:01:07.7523678+00:00" endTime="2024-02-15T12:01:20.6652801+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5bd018d-d3b8-478f-918d-700cfe8365e2">
+      <Output>
+        <StdOut>Test passed</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="21b7d8ad-7e08-45f3-b533-89a69117f61e" testId="6439003e-0b5b-0bb1-4f57-5618de6e22fe" testName="formsDemo" computerName="TERRA-STEVE" duration="00:00:09.8636839" startTime="2024-02-15T12:00:41.4600136+00:00" endTime="2024-02-15T12:00:51.3232901+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21b7d8ad-7e08-45f3-b533-89a69117f61e">
+      <Output>
+        <StdOut>Element was not there but dont crash&#xD;
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#NOSUCHELEMENT"}&#xD;
+  (Session info: MicrosoftEdge=121.0.2277.112); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#xD;
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)&#xD;
+   at OpenQA.Selenium.By.&lt;.ctor&gt;b__11_0(ISearchContext context)&#xD;
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(By by)&#xD;
+   at uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.FormsDemoTest.formsDemo() in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\WebDriverTests\FormsDemoTest.cs:line 118&#xD;
+Collection was empty - expected element not found&#xD;
+Status: Failed&#xD;
+Message:   Assert.That(driver.FindElement(By.Id("textInputValue")).Text, Is.EqualTo("Stephen"))&#xD;
+  Expected string length 7 but was 5. Strings differ at index 3.&#xD;
+  Expected: "Stephen"&#xD;
+  But was:  "Steve"&#xD;
+  --------------^</StdOut>
+        <ErrorInfo>
+          <Message>  Assert.That(driver.FindElement(By.Id("textInputValue")).Text, Is.EqualTo("Stephen"))&#xD;
+  Expected string length 7 but was 5. Strings differ at index 3.&#xD;
+  Expected: "Stephen"&#xD;
+  But was:  "Steve"&#xD;
+  --------------^&#xD;
+</Message>
+          <StackTrace>   at uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.FormsDemoTest.formsDemo() in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\WebDriverTests\FormsDemoTest.cs:line 101&#xD;
+
+1)    at uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.FormsDemoTest.formsDemo() in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\WebDriverTests\FormsDemoTest.cs:line 101&#xD;
+
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FirstTest" storage="c:\users\stevepowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll" id="7af553c5-afa3-a6db-a9a1-b97e2ae15295">
+      <Execution id="b507c710-5af5-4195-94f2-e6fcae049e50" />
+      <TestMethod codeBase="C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\Debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll" adapterTypeName="executor://nunit3testexecutor/" className="uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.HelloWebDriver" name="FirstTest" />
+    </UnitTest>
+    <UnitTest name="formsDemo" storage="c:\users\stevepowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll" id="6439003e-0b5b-0bb1-4f57-5618de6e22fe">
+      <Execution id="21b7d8ad-7e08-45f3-b533-89a69117f61e" />
+      <TestMethod codeBase="C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\Debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll" adapterTypeName="executor://nunit3testexecutor/" className="uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.FormsDemoTest" name="formsDemo" />
+    </UnitTest>
+    <UnitTest name="DragDropDemo" storage="c:\users\stevepowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll" id="6b8b5b78-27c7-ff0e-3cf0-06c9d35fc1ad">
+      <Execution id="c5bd018d-d3b8-478f-918d-700cfe8365e2" />
+      <TestMethod codeBase="C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\Debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll" adapterTypeName="executor://nunit3testexecutor/" className="uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.HelloWebDriver" name="DragDropDemo" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7af553c5-afa3-a6db-a9a1-b97e2ae15295" executionId="b507c710-5af5-4195-94f2-e6fcae049e50" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b8b5b78-27c7-ff0e-3cf0-06c9d35fc1ad" executionId="c5bd018d-d3b8-478f-918d-700cfe8365e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6439003e-0b5b-0bb1-4f57-5618de6e22fe" executionId="21b7d8ad-7e08-45f3-b533-89a69117f61e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="1" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running selected tests in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\bin\Debug\net6.0\uk.co.edgewords.nfocus6.webdriverdemo.dll&#xD;
+   NUnit3TestExecutor discovered 3 of 3 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="TERRA-STEVE" outcome="Warning" timestamp="2024-02-15T12:00:51.3979697+00:00">
+        <Text>Element was not there but dont crash&#xD;
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#NOSUCHELEMENT"}&#xD;
+  (Session info: MicrosoftEdge=121.0.2277.112); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#xD;
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)&#xD;
+   at OpenQA.Selenium.By.&lt;.ctor&gt;b__11_0(ISearchContext context)&#xD;
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)&#xD;
+   at OpenQA.Selenium.WebDriver.FindElement(By by)&#xD;
+   at uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests.FormsDemoTest.formsDemo() in C:\Users\StevePowell\source\repos\uk.co.edgewords.nfocus6.webdriverdemo\uk.co.edgewords.nfocus6.webdriverdemo\WebDriverTests\FormsDemoTest.cs:line 118&#xD;
+Collection was empty - expected element not found&#xD;
+Status: Failed&#xD;
+Message:   Assert.That(driver.FindElement(By.Id("textInputValue")).Text, Is.EqualTo("Stephen"))&#xD;
+  Expected string length 7 but was 5. Strings differ at index 3.&#xD;
+  Expected: "Stephen"&#xD;
+  But was:  "Steve"&#xD;
+  --------------^&#xD;
+&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="TERRA-STEVE" outcome="Warning" timestamp="2024-02-15T12:01:07.7558471+00:00">
+        <Text>Start test&#xD;
+Should be on Login page. Heading text is: Access and Authentication&#xD;
+Attaching screenshot to report&#xD;
+Also writes a line in to the report&#xD;
+The typed username text is &#xD;
+The typed text is actually : edgewords&#xD;
+Finish test&#xD;
+Status: Failed&#xD;
+Message:   Already logged in? Continue rest of test anyway...&#xD;
+Assert.That(bodyText, Does.Contain("User is not logged in"))&#xD;
+  Expected: String containing "User is not logged in"&#xD;
+  But was:  "User is not Logged in&#xD;
+Login&#xD;
+Register&#xD;
+Access and Authentication&#xD;
+Login&#xD;
+User Name?&#xD;
+Password?&#xD;
+Submit Clear&#xD;
+©2014 Edgewords Limited"&#xD;
+&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="TERRA-STEVE" outcome="Warning" timestamp="2024-02-15T12:01:20.6672368+00:00">
+        <Text>Test passed&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
