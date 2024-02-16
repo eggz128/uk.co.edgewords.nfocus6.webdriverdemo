@@ -93,5 +93,26 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.POMClasses
             }
 
         }
+
+        //For negative tests supply an alternative implimentation of Login
+        public bool LoginExpectFail(string username, string password)
+        {
+            //setUsername(username); //"Java"ish method
+            Username = username; //C#ish property setting
+            setPassword(password);
+            submitForm();
+
+            //If alert is present login must have failed - as expected for this method
+            try
+            {
+                _driver.SwitchTo().Alert();
+                return true; //Failed log
+            }
+            catch (NoAlertPresentException e)
+            {
+                return false; //Login success
+            }
+
+        }
     }
 }

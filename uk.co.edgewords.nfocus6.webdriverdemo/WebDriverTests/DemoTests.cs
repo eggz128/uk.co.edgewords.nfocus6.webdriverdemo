@@ -95,5 +95,16 @@ namespace uk.co.edgewords.nfocus6.webdriverdemo.WebDriverTests
                 .setPassword("edgewords123") //all in this one statement
                 .submitForm(); //But don't. If an action causes a page navigation it's best to stop the chain there.
         }
+
+        [Test]
+        public void NegativeLoginTest()
+        {
+            driver.Url = "https://www.edgewordstraining.co.uk/webdriver2/";
+            HomePagePOM home = new HomePagePOM(driver);
+            home.GoLogin(); //Page naviagtion occurred. Now init next page.
+            LoginPagePOM loginPage = new LoginPagePOM(driver); //Has check in constructor to ensure we are on the right page.
+            bool failedLogin = loginPage.LoginExpectFail("edgewords", "notavalidpasswordatall");
+            Assert.That(failedLogin, Is.True);
+        }
     }
 }
